@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> %sveltekit.head%
+    <link rel="preload" href=./lib/fonts/LibreFranklin-Regular.ttf " as="font " type="font/ttf " crossorigin>
+</head>
+
+<body data-sveltekit-preload-data="hover ">
+    <div style="display: contents ">%sveltekit.body%</div>
+</body>
+
+</html>
+
+<style>
+    /* English Fonts */
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('$lib/fonts/LibreFranklin-Regular.ttf') format('ttf'), url('$lib/fonts/LibreFranklin-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('$lib/fonts/LibreFranklin-Bold.ttf') format('ttf'), url('$lib/fonts/LibreFranklin-Bold.ttf') format('tff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Serif';
+    src: url('$lib/fonts/PTSerif-Regular.ttf') format('ttf'), url('$lib/fonts/PTSerif-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+
+/* Telugu Fonts */
+
+@font-face {
+    font-family: 'Mandali';
+    src: url('$lib/fonts/Mandali-Regular.ttf') format('ttf'), url('$lib/fonts/Mandali-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gautami Libre';
+    src: url('$lib/fonts/Gautami-Regular.ttf') format('ttf'), url('$lib/fonts/Gautami-Regular.ttf') format('ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gautami Libre';
+    src: url('$lib/fonts/Gautami-Bold.ttf') format('ttf'), url('$lib/fonts/Gautami-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-display: swap;
+}
+
+     :root {
+        background-color: #000;
+        /* English fonts */
+        --heading-font: 'Libre Franklin', sans-serif;
+        --body-font: 'PT Serif', serif;
+        /* Telugu fonts */
+        --telugu-heading: 'Mandali', 'Noto Sans Telugu', sans-serif;
+        --telugu-body: 'Gautami Libre', 'Noto Sans Telugu', sans-serif;
+    }
+    /* Default English styles */
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--heading-font);
+    }
+
+    a{
+        font-family: var(--telugu-heading);
+    }
+    
+    body {
+        font-family: var(--body-font);
+        background-color: var(--background-color);
+        line-height: 1.6;
+    }
+    /* Telugu-specific styles */
+    
+    [lang="te "] h1,
+    [lang="te "] h2,
+    [lang="te "] h3,
+    [lang="te "] h4,
+    [lang="te "] h5,
+    [lang="te "] h6 {
+        font-family: var(--telugu-heading);
+        line-height: 1.4;
+        font-weight: 700;
+    }
+    
+    [lang="te "] {
+        font-family: var(--telugu-body);
+        line-height: 1.8;
+        font-size: 18px;
+    }
+</style>
